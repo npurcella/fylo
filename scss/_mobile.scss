@@ -1,0 +1,110 @@
+body {
+    font-family: $defaultFontStyle;
+    font-size: $defaultFontSize;
+    color: $paleBlue;
+}
+.container {
+    background-image: url("../images/bg-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 1rem 1rem 2rem 1rem;
+    padding: 8rem 1rem 8rem 1rem;
+}
+.actions,
+.info {
+    background-color: $darkBlue;
+    padding: 2rem;
+    margin: 0 auto;
+}
+.actions {
+    margin-bottom: 1rem;
+    padding-top: 2.5rem;
+    border-radius: 0 90px 0 0;
+    display: flex;
+    flex-direction: column;
+    .actions-block {
+        display: flex;
+        .action-button {
+            display: flex;
+            margin: 1.5rem 1rem 0.25rem 0;
+            padding: 0.75rem;
+            background-color: $veryDarkBlue;
+            border-radius: 10px 0.5rem 10px 10px;
+            a {
+                align-self: center;
+            }
+        }
+    }
+}
+.info {
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 3.5rem;
+    span {
+        font-weight: $boldWeight;
+    }
+    progress {
+        background: white;
+        margin: 0.75rem auto 0.75rem;
+        width: 90%;
+        border-radius: 25px;
+        background-color: $veryDarkBlue;
+        border: none;
+    }
+    progress[value] {
+        appearance: none;
+    }
+    progress[value]::-webkit-progress-bar {
+        background-color: $veryDarkBlue;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+        border-radius: 25px;
+    }
+    progress[value]::-webkit-progress-value {
+        background-image: -webkit-linear-gradient(
+            left,
+            rgb(255, 163, 153),
+            rgb(255, 77, 151)
+        );
+        border-radius: 25px;
+    }
+    progress[value]::-moz-progress-bar {
+        background-color: $veryDarkBlue;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+        background-image: -moz-linear-gradient(
+            left,
+            rgb(255, 163, 153),
+            rgb(255, 77, 151)
+        );
+        border-radius: 15px;
+    }
+    .scale-markers {
+        display: flex;
+        justify-content: space-between;
+    }
+    .info-block {
+        position: absolute;
+        top: 110px;
+        left: 50%;
+        margin-left: -5rem;
+        color: $veryDarkBlue;
+        background-color: white;
+        border-radius: 0.5rem;
+        text-transform: uppercase;
+        padding: 1rem;
+        display: inline-block;
+        span {
+            font-weight: $boldWeight;
+            font-size: 3rem;
+            vertical-align: middle;
+        }
+    }
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin: 0 auto;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
